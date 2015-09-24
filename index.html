@@ -42,9 +42,42 @@
     </nav>
 
     <div class="container">
-        <div class="starter-template">
+       
+       <div class="starter-template">
+           <h2>Videótár</h2>
            
-            <div class="audio-handler-div">
+           <div class="media-handler-div row">
+               <div class="col-xs-12 col-md-3 video-container">
+                    <video>
+                        <source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4">
+                    </video>
+                    <div class="row">
+                        <div class="col-xs-12"></div>
+                    </div>                   
+                    <button class="play btn btn-success">
+                        <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+                    </button>
+                    <button class="mute btn btn-warning">
+                        <span class="glyphicon glyphicon-volume-off" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span>
+                    </button>
+                    <button class="full-screen btn btn-info">
+                        <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                    </button>                   
+               </div>
+               <div class="col-xs-12 col-md-9">
+                   Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+               </div>
+            </div>
+            
+       </div>
+       
+        <div class="starter-template">
+          
+          <h2>Hangok lejátszása</h2>
+           
+            <div class="media-handler-div">
                 <audio class="audio1" src="src/minta.mp3"></audio>
                 <button class="play btn btn-success">
                     <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
@@ -58,7 +91,7 @@
                 
                 <br>
             
-            <div class="audio-handler-div">
+            <div class="media-handler-div">
                 <audio class="audio2" src="src/minta2.mp3"></audio>
                 <button class="play btn btn-success">
                     <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
