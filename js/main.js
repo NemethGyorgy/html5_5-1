@@ -39,7 +39,11 @@ var audioHandler = function( div ) {
                     self.video.parentNode.classList.add( "col-md-3" );  
                 } else {
                     self.video.parentNode.classList.remove( "col-md-3" );
-                    self.video.parentNode.classList.add( "col-md-12" );                                        
+                    self.video.parentNode.classList.add( "col-md-12" ); 
+                    
+                    if(self.video.requestFullScreen) { self.video.requestFullScreen(); }
+                    else if(self.video.mozRequestFullScreen) { self.video.mozRequestFullScreen(); }
+                    else if(self.video.webkitRequestFullScreen) { self.video.webkitRequestFullScreen(); }
                 }
                 
                 
