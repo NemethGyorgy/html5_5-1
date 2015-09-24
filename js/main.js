@@ -14,6 +14,16 @@ var audioHandler = function( audio_selector ) {
         this.audio.pause();
     };
     
+    // Némítás.
+    this.mute = function() {
+        this.audio.muted = true;
+    };
+    
+    // Némítás váltása.
+    this.toggleMute = function() {
+        this.audio.muted = !this.audio.muted;
+    };
+    
 };
 
 var audio1 = new audioHandler( ".audio1" );
