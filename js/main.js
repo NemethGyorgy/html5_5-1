@@ -1,12 +1,41 @@
 // Audió vezérlő.
-var audioHandler = function( audio_selector ) {
+var audioHandler = function( div ) {
     
     // Audió elem kiválasztása és mentése.
-    this.audio = document.querySelector( audio_selector );
+    this.div = div;
+    this.playBtn = div.querySelector( ".play" );
+    this.muteBtn = div.querySelector( ".mute" );
+    this.audio = div.querySelector( "audio" );
+    
+    // Constructor.
+    this.construct = function() {
+        
+        // Lejátszó gomb.
+        this.playBtn.addEventListener( "click", function() {
+            this.parentNode.handler.togglePlay();
+        }, false );
+        
+        // Pause gomb.
+        this.muteBtn.addEventListener( "click", function() {
+            this.parentNode.handler.toggleMute();
+        }, false );
+        
+    };
     
     // Lejátszás.
     this.play = function() {
         this.audio.play();
+    };
+    
+    // Lejátszás váltása.
+    this.togglePlay = function() {
+        if ( this.audio.paused ) {
+            this.play();
+            this.div.classList.add( "played" );
+        } else {
+            this.pause();
+            this.div.classList.remove( "played" );
+        }
     };
     
     // Megállítás.
@@ -22,6 +51,11 @@ var audioHandler = function( audio_selector ) {
     // Némítás váltása.
     this.toggleMute = function() {
         this.audio.muted = !this.audio.muted;
+        if ( this.audio.muted ) {
+            this.div.classList.add( "muted" );
+        } else {
+            this.div.classList.remove( "muted" );            
+        }
     };
     
     // Összes némítása.
@@ -55,10 +89,17 @@ var audioHandler = function( audio_selector ) {
         
     };
     
+    this.construct();
+    
 };
 
-var audio1 = new audioHandler( ".audio1" );
-var audio2 = new audioHandler( ".audio2" );
+var audioDivs = document.querySelectorAll( ".audio-handler-div" );
+Array.prototype.forEach.call( audioDivs, function( item ) {
+    item.handler = new audioHandler( item );
+} );
+
+// var audio1 = new audioHandler( ".audio1" );
+// var audio2 = new audioHandler( ".audio2" );
 
 
 

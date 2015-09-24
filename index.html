@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
+    <link rel="stylesheet" href="css/main.css">
 
     <!--[if IE]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -42,9 +43,33 @@
 
     <div class="container">
         <div class="starter-template">
-            <audio class="audio1" src="src/minta.mp3" controls loop></audio>
-            <br>
-            <audio class="audio2" src="src/minta2.mp3" controls></audio>
+           
+            <div class="audio-handler-div">
+                <audio class="audio1" src="src/minta.mp3"></audio>
+                <button class="play btn btn-success">
+                    <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+                </button>
+                <button class="mute btn btn-warning">
+                    <span class="glyphicon glyphicon-volume-off" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span>
+                </button>
+            </div>
+                
+                <br>
+            
+            <div class="audio-handler-div">
+                <audio class="audio2" src="src/minta2.mp3"></audio>
+                <button class="play btn btn-success">
+                    <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+                </button>
+                <button class="mute btn btn-warning">
+                    <span class="glyphicon glyphicon-volume-off" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span>
+                </button>
+            </div>
+            
         </div>
     </div>
 
